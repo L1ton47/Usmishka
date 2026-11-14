@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Усмішка — стоматологія без поспіху</title>
+<meta name="description" content="Лікування, чистка, імплантація й дитяча стоматологія. Вільні вікна на сьогодні та онлайн-запис.">
+<style>
+:root{--bg:#e9eff9;--ink:#1a2347;--co:#f0614f;--w:#fff;--mut:#55608a;--ln:#c5d0e8}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 "Segoe UI",Helvetica,Arial,sans-serif}
+:focus-visible{outline:3px solid var(--co);outline-offset:2px}
+.p{font-family:"Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 6vw}
+.logo{font-size:26px;font-weight:700;text-decoration:none}
+.logo::after{content:".";color:var(--co)}
+header nav a{margin-left:22px;color:var(--mut);text-decoration:none}
+.hero{display:grid;grid-template-columns:1.5fr 1fr;gap:5vw;padding:40px 6vw 30px;align-items:end}
+h1{font-size:clamp(40px,7vw,92px);line-height:1;font-weight:400;letter-spacing:-.02em}
+h1 i{color:var(--co)}
+.hero p{margin-top:20px;max-width:44ch;color:var(--mut)}
+.win{background:var(--w);padding:22px;border-radius:4px}
+.win h2{font-size:20px;margin-bottom:10px}
+.win button{display:flex;justify-content:space-between;width:100%;background:none;border:0;border-top:1px solid var(--ln);padding:12px 0;font:inherit;color:var(--ink);cursor:pointer}
+.win button span{color:var(--co);font-weight:600}
+.win button:hover b{text-decoration:underline}
+section{padding:50px 6vw}
+.two{display:grid;grid-template-columns:1fr 2fr;gap:5vw}
+.two>h2{font-size:clamp(30px,4vw,46px);font-weight:400;line-height:1.1;position:sticky;top:20px;align-self:start}
+table{width:100%;border-collapse:collapse}
+td,th{padding:13px 8px;text-align:left;border-bottom:1px solid var(--ln)}
+th{font-weight:600;color:var(--mut);font-size:14px}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+tr:nth-child(even) td{background:rgba(255,255,255,.55)}
+.dr{display:grid;grid-template-columns:90px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--ln);align-items:center}
+.av{width:90px;height:90px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-size:40px}
+.dr:nth-child(2) .av{background:var(--co)}
+.dr h3{font-size:22px;font-weight:600}
+.dr p{color:var(--mut);font-size:15px}
+.tl{border-left:2px solid var(--ink);padding-left:26px;display:grid;gap:24px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-34px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--co)}
+.tl b{display:block;font-size:20px}
+.tl p{color:var(--mut)}
+.band{background:var(--ink);color:#fff;padding:50px 6vw;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+.band h2{font-size:clamp(28px,4vw,44px);font-weight:400;line-height:1.1}
+.band p{color:#c9d2ef}
+details{border-bottom:1px solid var(--ln);padding:14px 0}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--mut);margin-top:6px;font-size:16px}
+.wz{background:var(--w);padding:26px;border-radius:4px;max-width:560px}
+.wz h3{font-size:22px;margin-bottom:12px}
+.ch{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.ch button{font:inherit;padding:9px 16px;border:1px solid var(--ink);background:none;border-radius:30px;cursor:pointer;color:var(--ink)}
+.ch button[aria-pressed=true]{background:var(--ink);color:#fff}
+.wz input{font:inherit;padding:12px;border:1px solid var(--ln);width:100%;margin-bottom:10px;border-radius:4px}
+.nx{background:var(--co);color:#fff;border:0;padding:12px 26px;border-radius:30px;font:600 17px inherit;cursor:pointer}
+.bk{background:none;border:0;color:var(--mut);cursor:pointer;font:inherit;margin-right:14px}
+.dots{color:var(--mut);font-size:14px;margin-bottom:8px}
+#msg{margin-top:12px;font-weight:600;color:var(--co)}
+.step{display:none}.step.on{display:block}
+footer{padding:26px 6vw;color:var(--mut);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media(max-width:780px){.hero,.two,.band{grid-template-columns:1fr}.two>h2{position:static}}
+</style>
+</head>
+<body>
+<header><a class="logo p" href="#">Усмішка</a><nav><a href="#price">Ціни</a><a href="#docs">Лікарі</a><a href="#book">Запис</a></nav></header>
+<div class="hero">
+<div><h1 class="p">Лікуємо зуби, <i>не нерви.</i></h1><p>Приймаємо тільки за записом, тож у коридорі ви нікого не зустрінете. План і ціну називаємо до того, як лікар візьме до рук інструмент.</p></div>
+<div class="win"><h2 class="p">Вільні вікна найближчими днями</h2>
+<button data-t="Сьогодні, 17:30"><b>Сьогодні, 17:30</b><span>Огляд</span></button>
+<button data-t="Завтра, 10:00"><b>Завтра, 10:00</b><span>Чистка</span></button>
+<button data-t="Завтра, 14:30"><b>Завтра, 14:30</b><span>Лікування</span></button>
+<button data-t="Четвер, 9:00"><b>Четвер, 9:00</b><span>Консультація</span></button></div>
+</div>
+
+<section class="two" id="price"><h2 class="p">Ціни без зірочок</h2>
+<table><tr><th>Послуга</th><th>Час</th><th>Ціна</th></tr>
+<tr><td>Огляд і консультація</td><td>30 хв</td><td>від 300 грн</td></tr>
+<tr><td>Лікування карієсу</td><td>1 год</td><td>від 1000 грн</td></tr>
+<tr><td>Професійна чистка</td><td>1 год</td><td>від 1300 грн</td></tr>
+<tr><td>Відбілювання</td><td>1 год</td><td>від 3500 грн</td></tr>
+<tr><td>Імплантація</td><td>1 год</td><td>від 18000 грн</td></tr>
+<tr><td>Дитячий огляд</td><td>30 хв</td><td>безкоштовно</td></tr></table></section>
+
+<section class="two" id="docs"><h2 class="p">Лікарі</h2>
+<div><div class="dr"><div class="av p">О</div><div><h3 class="p">Олена Мартинюк, терапевт</h3><p>12 років лікує карієс і ставить пломби, які не видно навіть їй самій.</p></div></div>
+<div class="dr"><div class="av p">А</div><div><h3 class="p">Андрій Коваль, хірург-імплантолог</h3><p>Понад 800 імплантів. Завжди показує на знімку, що саме збирається робити.</p></div></div>
+<div class="dr"><div class="av p">І</div><div><h3 class="p">Ірина Лис, гігієністка</h3><p>Працює з дітьми та дорослими, які 10 років не були в стоматолога.</p></div></div></div></section>
+
+<section class="two"><h2 class="p">Перший візит</h2>
+<div class="tl"><div><b class="p">Ви розповідаєте, що турбує</b><p>Лікар слухає, не перебиваючи й не поглядаючи на годинник.</p></div>
+<div><b class="p">Робимо знімок</b><p>Цифровий, з мінімальною дозою. Результат одразу на екрані.</p></div>
+<div><b class="p">Отримуєте письмовий план</b><p>З чого почати, що може зачекати та скільки це коштує.</p></div>
+<div><b class="p">Лікуємо тільки після вашої згоди</b><p>Якщо хочете подумати, просто підете додому з планом у руках.</p></div></div></section>
+
+<div class="band"><div><h2 class="p">Перший візит дитини без сліз</h2></div><p>Ірина показує кабінет як ігрову кімнату, а інструменти як іграшки. Лікуємо тільки тоді, коли дитина готова, а знеболення дитячим гелем пахне полуницею. Огляд безкоштовний.</p></div>
+
+<section class="two"><h2 class="p">Питання</h2><div>
+<details><summary>Чи боляче лікувати?</summary><p>Ми починаємо лише після дії анестезії. Якщо стає боляче, піднімаєте руку, і лікар зупиняється.</p></details>
+<details><summary>Як часто ходити на огляд?</summary><p>Раз на пів року. Це дешевше, ніж лікувати запущений карієс.</p></details>
+<details><summary>Чи є розстрочка?</summary><p>Так, для імплантації та протезування: 6–12 місяців без переплат.</p></details>
+<details><summary>Скільки триває імплантація?</summary><p>Сама операція до години. Імплант приживається 3–4 місяці, потім ставимо коронку.</p></details></div></section>
+
+<section class="two" id="book"><h2 class="p">Запис</h2>
+<div class="wz">
+<div class="dots" id="dots"></div>
+<div class="step on" data-s="0"><h3 class="p">Що вас турбує?</h3><div class="ch" id="svc"></div><button class="nx" data-go="1">Далі</button></div>
+<div class="step" data-s="1"><h3 class="p">Коли зручно?</h3><div class="ch" id="slots"></div><button class="bk" data-go="0">Назад</button><button class="nx" data-go="2">Далі</button></div>
+<form class="step" data-s="2" id="f"><h3 class="p">Як з вами зв’язатися?</h3><input id="n" placeholder="Ім’я" required aria-label="Ім’я"><input id="t" type="tel" placeholder="Телефон" required aria-label="Телефон"><button class="bk" type="button" data-go="1">Назад</button><button class="nx" type="submit">Записатися</button></form>
+<div id="msg" role="status"></div></div></section>
+<footer><span>Усмішка · вул. Прикладна, 7 · пн–сб 9:00–20:00</span><span>Демо-проєкт: дані вигадані</span></footer>
+<script>
+const SV=['Огляд','Біль у зубі','Чистка','Відбілювання','Імплантація','Дитина'],SL=['Сьогодні, 17:30','Завтра, 10:00','Завтра, 14:30','Четвер, 9:00','Четвер, 16:00'];
+let sv='',sl='',st=0;const $=id=>document.getElementById(id);
+function chips(id,arr,get,set){$(id).innerHTML=arr.map(x=>`<button type="button" aria-pressed="${get()===x}">${x}</button>`).join('');
+[...$(id).children].forEach((b,i)=>b.onclick=()=>{set(arr[i]);chips(id,arr,get,set)})}
+function go(n){const m=$('msg');m.textContent='';
+if(n>st&&st===0&&!sv){m.textContent='Оберіть, що вас турбує.';return}
+if(n>st&&st===1&&!sl){m.textContent='Оберіть зручний час.';return}
+st=n;document.querySelectorAll('.step').forEach(s=>s.classList.toggle('on',+s.dataset.s===n));$('dots').textContent='Крок '+(n+1)+' із 3'}
+chips('svc',SV,()=>sv,v=>sv=v);chips('slots',SL,()=>sl,v=>sl=v);go(0);
+document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+document.querySelectorAll('.win button').forEach(b=>b.onclick=()=>{sl=b.dataset.t;if(!SL.includes(sl))SL.unshift(sl);chips('slots',SL,()=>sl,v=>sl=v);$('book').scrollIntoView();go(sv?1:0)});
+$('f').onsubmit=e=>{e.preventDefault();$('msg').textContent='Дякуємо, '+$('n').value+'! '+sv+', '+sl+'. Це демо, запис не надіслано.';e.target.reset()};
+</script>
+</body>
+</html>
